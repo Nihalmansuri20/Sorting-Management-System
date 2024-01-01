@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Reggae One', cursive;
+}
+h2{
+    text-align: center;
+    margin-top: 25px ;
+    margin-bottom: 25px;
+}
+.HeaderElements{
+    text-align: center;
+}
+.startButton{
+    text-align: center;
+}
+#blockContainer{
+    margin:25px ;
+}
+.blockStyle{
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+    font-weight: bold;
+    color:white ;
+    background-color:#990099;
+    border: thin solid white;
+    transition: 0.5s all ease;
+}
+.paraStyle{
+    display: inline-block;
+}
+.circle{
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.indicator{
+    margin-top: 20px;
+}

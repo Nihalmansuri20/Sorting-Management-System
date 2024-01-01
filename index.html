@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sorting.css">
+</head>
+
+<body>
+    <h2 class="p-2 bg-success bg-gradient rounded-pill">Sorting Algorithm Visualizer</h2>
+
+    <div class="d-flex justify-content-evenly flex-wrap">
+
+        <p name="Techniques" class="HeaderElements" >
+            <select id="selectSort">
+                <option value="B">Bubble Sort</option>
+                <option value="I">Insertion Sort</option>
+                <option value="S">Selection Sort</option>
+                <option value="M">Merge Sort</option>
+                <option value="Q">Quick Sort</option>
+            </select>
+        </p>
+
+        <p class="HeaderElements">
+            <span>Drag Range</span><br />
+            <input type="range" name="Nubmer" id="rangeUpdate" value="N" min="10" max="75"
+                onchange="updateRange(this.value);blockGenerator()"><br/>
+            <span id="displayRange">50</span>
+        </p>
+
+        <p class="HeaderElements">
+            <span>Choose Transition Speed</span><br />
+            <input type="range" name="Nubmer" id="speedUpdate" value="N" min="1" max="6"
+                onchange="updateSpeed(this.value);"><br />
+            <span id="displaySpeed">2x</span>
+        </p>
+
+        <p class="HeaderElements">
+            <button type="button" class="btn btn-dark" name="button" id="arrayGenerator"
+                onclick="blockGenerator()">Change Array</button>
+        </p>
+
+    </div>
+
+    <div class="body">
+
+        <div id="blockContainer">
+
+        </div>
+
+        
+        <div class="d-flex justify-content-evenly flex-wrap indicator mb-3" >
+
+        </div>
+
+        <div class="startButton">
+            <button type="button"  id="start" class="btn btn-dark" onclick="start()">Start</button>
+            <button type="button"  id="restart" class="btn btn-dark" onclick="location.reload();">Restart</button>
+        </div>
+
+    </div>
+
+    
+    <script src="js/sorting.js" charset="utf-8"></script>
+</body>
+
+</html>
